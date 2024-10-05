@@ -1,7 +1,7 @@
 # findskilleddev
-Find the best skilled technical candidate via findskilleddev (Your technical interview's copilot)
+Discover top-tier technical talent with FindSkilledDev, your ultimate technical interview copilot.
 
 ## Technologies Used
-Go Lang - Programming Language
-Chi - Router
-PostgreSQL - Database
+- **Go** - Programming Language
+- **Chi** - Router
+- **PostgreSQL** - Database
