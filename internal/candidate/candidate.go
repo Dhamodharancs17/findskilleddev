@@ -18,5 +18,5 @@ type Candidate struct {
 	LookedOutsideAI int                       `json:"looked_outside_ai" gorm:"not null;default:0"`
 	ResumeURL       string                    `json:"resume_url" gorm:"size:512"`
 	Status          string                    `json:"status" gorm:"not null"`
-	Sumbission      []submission.Submission   `json:"submissions" gorm:"constraint:OnDelete:CASCADE,OnUpdate:CASCADE;"`
+	Submission      []submission.Submission   `json:"submissions" gorm:"constraint:OnDelete:CASCADE,OnUpdate:CASCADE;"`
 }
