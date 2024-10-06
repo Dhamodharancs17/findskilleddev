@@ -8,4 +8,5 @@ type User struct {
 	Email    string `json:"email" gorm:"not null;unique,index"`
 	Password string `json:"password" gorm:"not null"`
 	Role     string `json:"role" gorm:"not null"`
+	OrganizationID uint `json:"organization_id" gorm:"not null"`
 }

@@ -1,14 +1,13 @@
 package candidate
 
 import (
-	"github.com/Dhamodharancs17/findskilleddev/internal/organization"
+	"github.com/Dhamodharancs17/findskilleddev/internal/submission"
 	"gorm.io/gorm"
 )
 
 type Candidate struct {
 	gorm.Model
 	OrganizationId  uint                      `json:"organization_id" gorm:"not null"`
-	Organization    organization.Organization `json:"organization" gorm:"constraint:OnDelete:CASCADE,OnUpdate:CASCADE;"`
 	Name            string                    `json:"name" gorm:"not null"`
 	Email           string                    `json:"email" gorm:"not null;uniqueIndex"`
 	EmailVerified   bool                      `json:"email_verified" gorm:"default:false"`
@@ -19,4 +18,5 @@ type Candidate struct {
 	LookedOutsideAI int                       `json:"looked_outside_ai" gorm:"not null;default:0"`
 	ResumeURL       string                    `json:"resume_url" gorm:"size:512"`
 	Status          string                    `json:"status" gorm:"not null"`
+	Sumbission      []submission.Submission   `json:"submissions" gorm:"constraint:OnDelete:CASCADE,OnUpdate:CASCADE;"`
 }
