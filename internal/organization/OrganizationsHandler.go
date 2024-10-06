@@ -7,7 +7,6 @@ import (
 	"github.com/Dhamodharancs17/findskilleddev/initializers"
 )
 
-
 func CreateOrganization(w http.ResponseWriter, r *http.Request) {
 	// create user
 	var organization Organization
