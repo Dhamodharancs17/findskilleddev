@@ -1,8 +1,11 @@
 package main
 
 import (
-	"github.com/go-chi/chi/v5"
 	"net/http"
+
+	"github.com/Dhamodharancs17/findskilleddev/internal/organization"
+	"github.com/Dhamodharancs17/findskilleddev/internal/user"
+	"github.com/go-chi/chi/v5"
 )
 
 func router() {
@@ -17,6 +20,12 @@ func router() {
 	})
 
 	//User routes
+	r.Post("/user/create", user.CreateUser)
+	r.Get("/user/show", user.GetUser)
+
+	// Organization routes
+	r.Post("/organization/create", organization.CreateOrganization)
+	r.Get("/organization/show", organization.GetOrganization)
 
 	// Start the server
 	http.ListenAndServe(":3000", r)
