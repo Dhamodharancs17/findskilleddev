@@ -12,5 +12,7 @@ func init () {
 }
 
 func main () {
+	router()
+
 	fmt.Println("Demo configuration for findskilleddev")
 }
