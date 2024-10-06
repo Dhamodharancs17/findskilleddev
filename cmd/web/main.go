@@ -6,12 +6,12 @@ import (
 	"github.com/Dhamodharancs17/findskilleddev/initializers"
 )
 
-func init () {
+func init() {
 	initializers.LoadEnvVariables()
 	initializers.InitDB()
 }
 
-func main () {
+func main() {
 	router()
 
 	fmt.Println("Demo configuration for findskilleddev")

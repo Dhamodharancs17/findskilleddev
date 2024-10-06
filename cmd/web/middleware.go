@@ -10,5 +10,5 @@ func server(r *chi.Mux) {
 	// Adding the middleware
 	r.Use(middleware.Logger)
 	r.Use(middleware.Recoverer)
-	
+
 }
