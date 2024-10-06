@@ -32,5 +32,5 @@ func main() {
 		panic("failed to get database")
 	}
 	defer sqlDB.Close()
-	
+
 }
