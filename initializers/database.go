@@ -7,10 +7,9 @@ import (
 	"gorm.io/gorm"
 )
 
+var DB *gorm.DB
 
-  var DB *gorm.DB
-
-  func InitDB() {
+func InitDB() {
 	dsn := os.Getenv("DB_DSN")
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {

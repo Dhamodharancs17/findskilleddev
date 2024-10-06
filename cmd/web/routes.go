@@ -1,11 +1,11 @@
 package main
 
 import (
-	"net/http"
 	"github.com/go-chi/chi/v5"
+	"net/http"
 )
 
-func router(){
+func router() {
 	r := chi.NewRouter()
 
 	// Adding the middleware
@@ -17,9 +17,7 @@ func router(){
 	})
 
 	//User routes
-	
 
-	
 	// Start the server
 	http.ListenAndServe(":3000", r)
 }
