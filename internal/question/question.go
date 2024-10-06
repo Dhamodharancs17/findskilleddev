@@ -12,5 +12,5 @@ type Question struct {
 	ExpectedAnswer string                  `json:"expected_answer" gorm:"type:text; not null"`
 	TestCase       string                  `json:"test_case" gorm:"type:json; not null"`
 	Language       string                  `json:"language" gorm:"not null"`
-	Submissions    []submission.Submission `json:"submissions" gorm:"constraint:OnDelete:CASCADE,OnUpdate:CASCADE;foreignKey: QuestionID, reference: ID"`
+	Submissions    []submission.Submission `json:"submissions" gorm:"constraint:OnDelete:CASCADE,OnUpdate:CASCADE;foreignKey:QuestionID;references:ID"`
 }

@@ -19,11 +19,18 @@ func main() {
 	//migrate the schema
 	initializers.DB.AutoMigrate(
 		// Add the model files here
+		&organization.Organization{},
 		&assessment.Assessment{},
 		&candidate.Candidate{},
-		&organization.Organization{},
 		&question.Question{},
 		&submission.Submission{},
 		&user.User{},
 	)
+
+	sqlDB, err := initializers.DB.DB()
+	if err != nil {
+		panic("failed to get database")
+	}
+	defer sqlDB.Close()
+	
 }
