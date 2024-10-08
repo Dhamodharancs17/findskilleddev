@@ -26,6 +26,13 @@ func router() {
 	// Organization routes
 	r.Post("/organization/create", organization.CreateOrganization)
 	r.Get("/organization/show", organization.GetOrganization)
+	r.Put("/organization/update", organization.UpdateOrganization)
+	r.Get("/organization/delete", organization.DeleteOrganization)
+	r.Get("/organization/all", organization.GetAllOrganizations)
+	r.Get("/organizationUsers", organization.GetOrganizationUsers)
+	r.Get("/organizationCandidates", organization.GetOrganizationCandidates)
+	r.Get("/organizationAssessments", organization.GetOrganizationAssessments)
+
 
 	// Start the server
 	http.ListenAndServe(":3000", r)
